@@ -6,14 +6,14 @@
 		<script type="application/javascript" src='./data.js'></script>
 	</head>
 	<body onload="init()">
-		<ul id="listDiv">
+		<div id="listDiv">
 			<script id="template-todo-item" type="text/template">
-				<li id="{{todo-item-id}}" class="{{todo-item-visibility}}" onclick="toggleItem({{todo-item-id}});">
-					<img src="{{todo-item-img-src}}" style="width:50%"></br>
-					{{todo-item-text}}
-				</li>
+				<div id="itemDiv_{{todo-item-id}}" class="itemDiv" onclick="toggleItem({{todo-item-id}});" style="{{todo-item-color}}">
+<!--					<img src="{{todo-item-img-src}}" style="width:50%"></br> -->
+					<div><span>{{todo-item-text}}</span></div>
+				</div>
 			</script>
-		</ul>
+		</div>
 	</body>
 </html>
 
